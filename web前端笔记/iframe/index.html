@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>iframe</title>
+	<link rel="stylesheet" type="text/css" href="./instyle.css">
+	<link rel="stylesheet" type="text/css" href="./emoji.css">
+	<script src="./iframe.js" type="text/javascript"></script>
+	<!-- <script src="./jq2.js"></script> -->
+	<!-- <script src="./vdcs2.js"></script> -->
+	<script src="./jquery.js"></script>
+	<!-- <script src="./app.js"></script> -->
+</head>
+<body>
+	<header id="header" class="header clear">
+		<i class="icon-align-justify sidebar-toggle"></i>
+		<a href="/index.html" class="logo"><span>微营销</span>客户资源管理平台</a>
+		<!-- <ul class="nav clear">
+			<li><a href="#"><i class="icon-bars"></i><span>6</span></a></li>
+			<li><a href="#"><i class="icon-email"></i><span>5</span></a></li>
+			<li><a href="#"><i class="icon-notice"></i><span>7</span></a></li>
+		</ul> -->
+		<div class="domain">
+			<a href="#"><em></em><t class="grade_name">233</t><span>admin</span></a>
+			<ul class="hide">
+				<div class="log-arrow-up"></div>
+				<li><a href="#"><i class="icon-setting"></i>设置</a></li>
+				<li><a href="#"><i class="icon-notice"></i>通知</a></li>
+				<li class="logout"><a href="#"><i class="icon-logout"></i>退出登录</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div id="sider" class="show">
+		<ul class="menu">
+			<li class="sider-li sider-stat ">
+				<dl>
+					<dd><a href="./dashboard.html"><i class="icon-calculator"></i><span>数据统计</span></a></dd>
+				</dl>
+			</li>
+			<li class="sider-li subs sider-res ">
+				<a href="javascript:;"><i class="icon-file-image-o"></i><span>资源管理</span></a>
+				<dl class="sub animated">
+					<dd><a href="./html/index1.html">全部资源</a></dd>
+					<dd><a href="./html/index2.html">添加资源</a></dd>
+				</dl>
+			</li>
+			<li class="sider-li subs sider-staff ">
+				<a href="javascript:;"><i class="icon-user"></i><span>用户管理</span></a>
+				<dl class="sub animated">
+					<dd><a href="/user/index.html">用户查询</a></dd>
+					<dd><a href="/user/add.html">用户添加</a></dd>
+				</dl>
+			</li>
+			<li class="sider-li subs sider-team ">
+				<a href="javascript:;"><i class="icon-users"></i><span>团队管理</span></a>
+				<dl class="sub animated">
+					<dd><a href="/team/index.html">部门查询</a></dd>
+					<dd><a href="/team/add.html">部门添加</a></dd>
+				</dl>
+			</li>
+			<li class="sider-li subs ">
+				<a href="javascript:;"><i class="icon-fax"></i><span>设备管理</span></a>
+				<dl class="sub animated">
+					<dd><a href="/term/list.html">设备列表</a></dd>
+				</dl>
+			</li>
+			<li class="sider-li subs sider-wx ">
+				<a href="javascript:;"><i class="icon-weixin"></i><span>微信管理</span></a>
+				<dl class="sub animated">
+					<dd><a href="/wechat/list.html">微信列表</a></dd>
+					<dd><a href="/wechat/search.html">好友查询</a></dd>
+					<!-- <dd><a href="/wechat/friend.html">好友列表</a></dd> -->
+				</dl>
+			</li>
+			<li class="sider-li subs sider-catch hide">
+				<a href="javascript:;"><i class="icon-wrench"></i><span>监控管理</span></a>
+				<dl class="sub animated">
+					<dd><a href="/catch/add_word.html">敏感词添加</a></dd>
+					<dd><a href="/catch/word_list.html">敏感词列表</a></dd>
+					<dd><a href="/catch/sen_word.html">敏感词记录</a></dd>
+					<dd><a href="/catch/money.html">交易记录</a></dd>
+					<dd><a href="/catch/delete.html">删除记录</a></dd>
+				</dl>
+			</li>
+			<li class="sider-li sider-sys hide">
+				<dl>
+					<dd><a href="/settings/index.html"><i class="icon-gear"></i><span>系统设置</span></a></dd>
+				</dl>
+			</li>
+			<li class="li_date"><span class="explan"></span> <span class="date"></span> <span class="week"></span></li>
+		</ul>
+	</div>
+
+	<div id="zbx-main">
+		<!-- iframe-tab -->
+		<div id="zbx-taber">
+			<ul>
+				<!-- <li data-index="1" class="" data-url="/index.html"><a href="javascript:;">欢迎登陆</a><em class="close"></em></li> -->
+			</ul>
+		</div>
+		<div id="zbx-main-con">
+
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		// app.browser.permissions();
+		mframe.initer();
+
+		// sider显隐
+		$('#header .sidebar-toggle').on('click',function(){
+			if($('#sider').is('.show')){
+				$('#sider').removeClass('show');
+				$('#zbx-main').addClass('show');
+			}else{
+				$('#sider').addClass('show');
+				$('#zbx-main').removeClass('show');
+			}
+		})
+		// sider点击
+		$('#sider .menu>li>a').on('click',function(){
+			var p=$(this).parent();
+			if(p.is('.pop')){
+				p.removeClass('pop');
+				p.css('height','40px');
+			}else{
+				$('#sider .menu>li').removeClass('pop').css('height','40px');
+				p.addClass('pop');
+				var h=p.find('.sub').height();
+				p.css('height',h+40+'px');
+			}
+			return false;
+		})
+		$('#sider .menu>li .sub .ismore>a').on('click',function(){
+			var p=$(this).parent();
+			var sub=p.parents('.sub');
+			var h=sub.find('dd').length*28;
+			var s=p.find('.sub-2').height();
+			if(p.is('.pop')){
+				p.removeClass('pop');
+				p.find('.sub-2').slideUp('fast');
+				sub.parent().css('height',(h+40)+'px');
+			}else{
+				$('#sider .menu>li .sub .ismore').removeClass('pop');
+				$('#sider .menu>li .sub .sub-2').slideUp('fast');
+				p.addClass('pop');
+				p.find('.sub-2').slideDown('fast');
+				sub.parent().css('height',(h+s+40)+'px');
+			}
+			return false;
+		})
+
+		// 通知点击
+		// $('#header .domain>a span').html(ua.session().get('names')?ua.session().get('names'):'admin');
+		// $('#header .domain>a .grade_name').html(cons.grade_name);
+		// $('#header .domain>a em').css('background-image','url('+(ua.session().get('avatar')?ua.session().get('avatar'):'/themes/xwx/images/page/my_moren.png')+')');
+		// $('#header .domain>a').on('click',function(){
+		// 	var _this=$(this);
+		// 	var ul=$(this).parent().find('ul');
+		// 	if(ul.is('.hide')){
+		// 		ul.removeClass('hide');
+		// 	}else{
+		// 		ul.addClass('hide');
+		// 	}
+		// 	return false;
+		// })
+
+		// // 退出登录
+		// $('#header .domain ul .logout a').on('click',function(){
+		// 	var opt={api:'account/logout'}
+		// 	iapp.request(opt,function(vars,maps,heads){
+		// 		ua.session().remove('sid');
+		// 		ua.session().remove('uid');
+		// 		ua.session().remove('names');
+		// 		ua.session().remove('avatar');
+		// 		ui.gox('/login.html');
+		// 	})
+		// 	return false;
+		// })
+})
+</script>
+</html>

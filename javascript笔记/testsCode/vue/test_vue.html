@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>learn Vue</title>
+	<!-- <script type="text/javascript" src="./learnVue.js"></script> -->
+	<style type="text/css">
+		h2{
+			text-align: center;
+			color: #ff0000;
+		}
+		input{
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<h2>learn Vue</h2>
+	<div id="test">
+		<h2 v-html="test"></h2>
+		<input type="text" name="" v-model="test">
+	</div>
+</body>
+	<script src="./js/observer.js"></script>
+	<script src="./js/watcher.js"></script>
+	<script src="./js/compile.js"></script>
+	<script src="./js/mvvm.js"></script>
+	<script type="text/javascript">
+		var test = new MVVM({
+			el:'#test',
+			data:{
+				list:[],
+				test: 'test'
+			},
+			methods:{
+
+			}
+		});
+	</script>
+</html>

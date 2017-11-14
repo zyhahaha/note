@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learn React</title>
+	<script src="./react/react.js"></script>
+    <script src="./react/react-dom.js"></script>
+    <script src="./react/browser.min.js"></script>
+	<style type="text/css">
+		h2{
+			text-align: center;
+			color: #ff0000;
+		}
+	</style>
+</head>
+<body>
+	<h2>learn React</h2>
+	<div id="example"></div>
+</body>
+	<script type="text/babel">
+		var names = ['Alice', 'Emily', 'Kate'];
+
+		ReactDOM.render(
+		  <div>
+		  {
+		    names.map(function (name) {
+		      return <div>Hello, {name}!</div>
+		    })
+		  }
+		  </div>,
+		  document.getElementById('example')
+		);
+    </script>
+</html>
