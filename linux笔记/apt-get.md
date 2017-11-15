@@ -1,5 +1,4 @@
 ### 查询功能
-
 `
 	apt-cache search package 搜索软件包
 
@@ -13,7 +12,6 @@
 `
 
 ### 安装功能
-
 `
 	sudo apt-get install package 安装包
 
@@ -25,7 +23,6 @@
 `
 
 ### 卸载功能
-
 `
 	sudo apt-get remove package 删除包
 
@@ -35,7 +32,6 @@
 `
 
 ### 升级功能
-
 `
 	sudo apt-get update  更新源
 
@@ -45,7 +41,6 @@
 `
 
 ### 下载功能
-
 `
 	apt-get source package  下载该包的源代码
 `
