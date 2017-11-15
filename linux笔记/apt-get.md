@@ -1,5 +1,5 @@
 ### 查询功能
-`
+
 	apt-cache search package 搜索软件包
 
 	apt-cache show package  获取包的相关信息，如说明、大小、版本等
@@ -9,7 +9,7 @@
 	apt-cache depends package 了解使用该包依赖那些包
 
 	apt-cache rdepends package 查看该包被哪些包依赖
-`
+
 
 ### 安装功能
 `
