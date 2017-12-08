@@ -55,6 +55,8 @@ $ git reflog // 记录你的每一次命令
 $ git cherry-pick e6397ab07f3cb                         * 可以选择某一个分支中的一个或几个commit(s)来进行操作 *  ***  ** 在一个分支内commit另一个分支里的代码 **
 $ git blame src/../../test.js                           * 查看该文件修改记录及作者 *
 $ git config --global alias.co checkout                 * 别名 *
+$ git log -- grep <filter-field>						* 根据commit内容查找某次提交 *
+$ git show <commit-hash-id>								* 查看某次commit的修改内容 *
 
 ### ---------------------------------- 开始步骤 -------------------------
 
