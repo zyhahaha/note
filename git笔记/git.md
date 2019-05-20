@@ -77,5 +77,6 @@
 
 	$ git remote prune origin								* 删除远程仓库不存在的分支 *
 	$ git remote set-url origin [url]						* git修改远程仓库地址 *
+	$ --allow-unrelated-histories							* 参数  fail histor *
 
 
