@@ -1,6 +1,6 @@
 git add .
 
-git commit -m "update"
+git commit -m %1
 
 git pull
 
