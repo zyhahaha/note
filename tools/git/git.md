@@ -76,7 +76,7 @@
 ### --------------------------------- 工作中遇到的技巧 -----------------------------
 
 	$ git remote prune origin								* 删除远程仓库不存在的分支 *
-	$ git remote set-url origin [url]						* git修改远程仓库地址 *
+	$ git remote set-url origin "newUrl"					* git修改远程仓库地址 *
 	$ --allow-unrelated-histories							* 参数  fail histor *
 
 
