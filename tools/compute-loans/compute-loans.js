@@ -3,7 +3,7 @@ const debtMoneyTotalOrigin = 1180000;
 const monthRate = 0.0588 / 12
 const monthTotal = 30 * 12
 
-function computeTotal(debtMoneyTotalParam){
+function computeTotal(debtMoneyTotalParam){ // 计算总体：一共多少
   let commonVar = (1 + monthRate) ** monthTotal
   let fractionUp = monthRate * commonVar
   let fractionDown = commonVar - 1
@@ -17,7 +17,7 @@ function computeTotal(debtMoneyTotalParam){
 
 /*********************** * **************************/
 
-function computeDetail(debtMoneyTotalParam, repaymentMonth){
+function computeDetail(debtMoneyTotalParam, repaymentMonth){ // 计算详情：每月多少
   let interestMonth = debtMoneyTotalParam * monthRate
   let debtMoneyMonth = repaymentMonth - interestMonth
   let remainDebtMoneyTotal = debtMoneyTotalParam - debtMoneyMonth
@@ -26,7 +26,7 @@ function computeDetail(debtMoneyTotalParam, repaymentMonth){
   return remainDebtMoneyTotal
 }
 
-function computeMonthly(debtMoneyTotalParam, month, minusMoney = 0) {
+function computeMonthly(debtMoneyTotalParam, month, minusMoney = 0) { // 计算剩余
   let remainDebtMoneyTotal = debtMoneyTotalParam
   let repaymentMonth = computeTotal(debtMoneyTotalParam)
   for(let i = 1; i <= month; i ++) {
@@ -40,7 +40,7 @@ function computeMonthly(debtMoneyTotalParam, month, minusMoney = 0) {
 let aaa = computeMonthly(debtMoneyTotalOrigin, 18, 200000)
 let bbb = computeMonthly(aaa, 12, 200000)
 let ccc = computeMonthly(bbb, 12, 200000)
-let ddd = computeMonthly(ccc, 12, 200000)
-let eee = computeMonthly(ddd, 12, 200000)
+// let ddd = computeMonthly(ccc, 12, 200000)
+// let eee = computeMonthly(ddd, 12, 200000)
 // let fff = computeMonthly(eee, 12, 100000)
-console.log(computeMonthly(eee, 1))
+console.log(computeMonthly(ccc, 1))
