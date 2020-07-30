@@ -11,7 +11,7 @@ function computeTotal(debtMoneyTotalParam){ // 计算总体：一共多少
   let repaymentTotal = repaymentMonth * monthTotal
   let interestTotal = repaymentTotal - debtMoneyTotalParam
 
-  // console.log(repaymentMonth, repaymentTotal, interestTotal)
+  console.log(repaymentMonth, repaymentTotal, interestTotal)
   return repaymentMonth;
 }
 
@@ -37,10 +37,10 @@ function computeMonthly(debtMoneyTotalParam, month, minusMoney = 0) { // 计算�
   return remainDebtMoneyTotal - minusMoney
 }
 
-let aaa = computeMonthly(debtMoneyTotalOrigin, 18, 200000)
-let bbb = computeMonthly(aaa, 12, 200000)
-let ccc = computeMonthly(bbb, 12, 200000)
+let aaa = computeMonthly(debtMoneyTotalOrigin, 18, 330000)
+// let bbb = computeMonthly(aaa, 12, 200000)
+// let ccc = computeMonthly(bbb, 12, 200000)
 // let ddd = computeMonthly(ccc, 12, 200000)
 // let eee = computeMonthly(ddd, 12, 200000)
 // let fff = computeMonthly(eee, 12, 100000)
-console.log(computeMonthly(ccc, 1))
+console.log(computeMonthly(aaa, 1))
