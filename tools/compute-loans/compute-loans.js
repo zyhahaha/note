@@ -37,7 +37,7 @@ function computeMonthly(debtMoneyTotalParam, month, minusMoney = 0) { // 计算�
   return remainDebtMoneyTotal - minusMoney
 }
 
-let aaa = computeMonthly(debtMoneyTotalOrigin, 18, 330000)
+let aaa = computeMonthly(debtMoneyTotalOrigin, 18, 300000)
 // let bbb = computeMonthly(aaa, 12, 200000)
 // let ccc = computeMonthly(bbb, 12, 200000)
 // let ddd = computeMonthly(ccc, 12, 200000)
