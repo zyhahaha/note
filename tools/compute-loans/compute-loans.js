@@ -1,4 +1,11 @@
-
+/**
+ * 公式：等额本息
+ * P:贷款本金 --> debtMoneyTotalOrigin
+ * R:月利率 --> monthRate
+ * N:还款期数 --> monthTotal
+ * 其中还款期数=贷款年限*12
+ * P * (((1 + R) ** N * R) / ((1 + R) ** N - 1))
+ */
 const debtMoneyTotalOrigin = 1180000;
 const monthRate = 0.0588 / 12
 const monthTotal = 30 * 12
