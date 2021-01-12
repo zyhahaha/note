@@ -80,3 +80,20 @@
 	$ --allow-unrelated-histories							* 参数  fail histor *
 
 
+### ---------------------------- 存储密码 ----------------------------
+	查看配置
+	git config user.name
+	git config user.email
+
+	修改
+	git config --global user.name "abc(新的用户名)"
+	git config --global user.email "abc@qq.com(新的邮箱)"
+	git config --global user.password"123456(新的密码)"
+
+	弄掉密码
+	git config --system --unset credential.helper
+
+	重新存储密码
+	git config --global credential.helper store
+
+
