@@ -3,10 +3,10 @@
 	$ sudo apt-get install nginx
 
 ### nodejs
-	$ wget https://nodejs.org/dist/v10.15.3/node-v10.15.3-linux-x64.tar.xz
-	  wget https://nodejs.org/dist/v10.15.3/node-v10.15.3-linux-armv7l.tar.xz
-	$ tar x -f node-v10.15.3-linux-x64.tar.xz
-	$ ln -s /home/zhaoyang/nodejs/node-v10.15.3-linux-x64/bin/node /usr/local/bin/node
+	$ wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-x64.tar.xz
+	  wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-armv7l.tar.xz
+	$ tar x -f node-v14.17.6-linux-x64.tar.xz
+	$ ln -s /home/zyhahaha/nodejs/node-v14.17.6-linux-x64/bin/node /usr/local/bin/node
 
 ### mysql
 	$ apt-get update
