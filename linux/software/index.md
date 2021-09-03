@@ -5,6 +5,7 @@
 ### nodejs
 	$ wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-x64.tar.xz
 	  wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-armv7l.tar.xz
+	  wget https://nodejs.org/dist/v10.15.3/node-v10.15.3-linux-armv7l.tar.xz
 	$ tar x -f node-v14.17.6-linux-x64.tar.xz
 	$ ln -s /home/zyhahaha/nodejs/node-v14.17.6-linux-x64/bin/node /usr/local/bin/node
 
