@@ -9,6 +9,9 @@
 	   wget https://nodejs.org/dist/v10.15.3/node-v10.15.3-linux-armv7l.tar.xz
 	$ tar x -f node-v14.17.6-linux-x64.tar.xz
 	$ ln -s /home/zyhahaha/nodejs/node-v14.17.6-linux-x64/bin/node /usr/local/bin/node
+### nodejs（源安装）
+	$ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+	$ sudo apt-get install -y nodejs
 
 ### mysql
 	$ apt-get update
