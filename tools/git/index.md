@@ -2,6 +2,7 @@
 	$ git status 		-- 查看状态
 	$ git remote -v 		-- 查看远程库信息
 	$ git diff HEAD -- readme.txt 		-- 可以查看工作区和版本库里面最新版本的区别
+	$ git config --global alias.cm cz 	-- 添加别名
 
 ### ------------------------------基础操作-------------------------------------
 	$ git remote add origin git@github.com:michaelliao/learngit.git 		-- 添加远程库
