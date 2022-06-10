@@ -1,0 +1,22 @@
+1、查询指定端口是否已经开启
+
+firewall-cmd --query-port=8091/tcp
+
+2、查看防火墙状态
+
+查看防火墙状态 systemctl status firewalld
+开启防火墙 systemctl start firewalld
+关闭防火墙 systemctl stop firewalld
+开启防火墙 service firewalld start
+若遇到无法开启
+先用：systemctl unmask firewalld.service
+然后：systemctl start firewalld.service
+
+3、设置对外端口
+
+添加指定需要开放的端口：
+firewall-cmd --add-port=8091/tcp --permanent
+重载入添加的端口：
+firewall-cmd --reload
+查询指定端口是否开启成功：
+firewall-cmd --query-port=8091/tcp
