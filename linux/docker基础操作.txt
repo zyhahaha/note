@@ -1,0 +1,8 @@
+### 导出导入容器
+docker export -o aaa.tar 4bdc6d3bcbd3
+docker import aaa.tar aaa:bbb
+
+### 导出导入镜像
+docker save -o wxy.tar onething1/wxedge
+docker load --input wxy.tar 或 docker load < wxy.tar
+
