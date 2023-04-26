@@ -68,6 +68,7 @@
 	$ git remote set-url origin "newUrl"					* git修改远程仓库地址 *
 	$ --allow-unrelated-histories							* 参数  fail histor *
 	$ git push origin test --force   		* 强制推送远程 *
+	$ git commit --amend   		* git修改commit信息（最后一条） *
 
 
 ### ---------------------------- 存储密码 ----------------------------
